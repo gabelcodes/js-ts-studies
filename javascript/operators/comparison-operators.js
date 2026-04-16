@@ -18,7 +18,7 @@ console.log(comp2); // false
 const comp3 = 5 >= 5;
 console.log(comp3); // true
 
-const comp4 = 3 <= 5;
+const comp4 = 3 <= 6;
 console.log(comp4); // true
 
 const comp5 = 10 == '10'; // não recomendavel, avalia apenas o valor 
