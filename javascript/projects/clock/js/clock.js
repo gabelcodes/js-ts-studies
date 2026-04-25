@@ -1,13 +1,17 @@
 function clock() {
 
+    function padZero(value) {
+        return value >= 10 ? value : `0${value}`;
+    }
+
     function format() {
-        const date = new Date('2026-04-23 20:10:30');
+        const date = new Date();
         const week = date.getDay();
-        const day = date.getDate();
+        const day = padZero(date.getDate());
         const month = date.getMonth();
         const year = date.getFullYear();
-        const hour = date.getHours();
-        const min = date.getMinutes();
+        const hour = padZero(date.getHours());
+        const min = padZero(date.getMinutes());
 
         let weekDay;
         let monthName;
@@ -40,9 +44,6 @@ function clock() {
         return `${weekDay}, ${monthName} ${day}, ${year} ${hour}:${min}`;
     }
 
-    const msg = format();
-    setMessage(msg);
-
     function createP() {
         const p = document.createElement('p');
         return p;
@@ -51,11 +52,15 @@ function clock() {
     function setMessage(msg) {
         const calendar = document.querySelector(".calendario");
         calendar.innerHTML = '';
-        const p = createP();
+        const p = document.createElement('p');
         p.innerHTML = msg;
-        calendar.appendChild(p);
+        calendar.appendChild(p)
     }
+
+    const msg = format();
+    setMessage(msg);
 
 }
 
 clock();
+setInterval(clock, 1000);
