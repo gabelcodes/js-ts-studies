@@ -1,0 +1,22 @@
+* {
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #005762;
+}
+
+.container {
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px;
+    background-color: #f0f8ff;
+}
