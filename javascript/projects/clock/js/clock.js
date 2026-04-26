@@ -44,11 +44,6 @@ function clock() {
         return `${weekDay}, ${monthName} ${day}, ${year} ${hour}:${min}`;
     }
 
-    function createP() {
-        const p = document.createElement('p');
-        return p;
-    }
-
     function setMessage(msg) {
         const calendar = document.querySelector(".calendario");
         calendar.innerHTML = '';
